@@ -7,7 +7,11 @@
   \********************/
 /***/ (() => {
 
-console.log('test');
+axios.get('../milestone-1/music.php').then(function (response) {
+  return console.log(response.data.response);
+})["catch"](function (error) {
+  return console.log(error);
+});
 
 /***/ }),
 
