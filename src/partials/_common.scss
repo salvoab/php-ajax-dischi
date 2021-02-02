@@ -29,6 +29,8 @@ main{
 
 .card{
     width: calc(100% / 3 - 40px);
+    padding: 20px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,5 +38,8 @@ main{
     background-color: $darker_bg;
     img{
         width: 90%;
+    }
+    h3, h4, h5{
+        padding: 5px 0;
     }
 }

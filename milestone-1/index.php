@@ -1,3 +1,7 @@
+<?php
+include __DIR__ . '/disks.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,29 +21,24 @@
 
     <main>
         <div class="container d-flex flex-wrap space-between">
-            <!-- TEST CARD -->
+            <!-- TEST CARD 
             <div class="card">
                 <img src="../dist/img/logo.png">
                 <h3>Titolo</h3>
                 <h4>Artista</h4>
                 <h5>1986</h5>
-            </div>
+                <h5>Genere</h5>
+            </div> -->
 
-            <!-- TEST CARD -->
-            <div class="card">
-                <img src="../dist/img/logo.png">
-                <h3>Titolo</h3>
-                <h4>Artista</h4>
-                <h5>1986</h5>
-            </div>
-
-            <!-- TEST CARD -->
-            <div class="card">
-                <img src="../dist/img/logo.png">
-                <h3>Titolo</h3>
-                <h4>Artista</h4>
-                <h5>1986</h5>
-            </div>
+            <?php foreach($disks as $disk) { ?>
+                <div class="card">
+                    <img src="<?php echo $disk['poster']; ?>">
+                    <h3><?php echo $disk['title']; ?></h3>
+                    <h4><?php echo $disk['author']; ?></h4>
+                    <h5><?php echo $disk['year']; ?></h5>
+                    <h5><?php echo $disk['genre']; ?></h5>
+                </div>
+            <?php } ?>
         </div>
     </main>
     <script src="../dist/js/app.js"></script>
