@@ -1,11 +1,41 @@
 let app = new Vue({
     el: '#root',
     data: {
-        disks: []
+        disks: [],
+        //Bonus
+        genres: [],
+        selectedGenre: 'All'
+    },
+    //metodi per il Bonus
+    methods:{
+        fillSelect(){
+            const selectElement = document.querySelector('select');
+            for(genre of this.genres){
+                const markup = `<option value="${genre}">${genre}</option>`;
+                selectElement.insertAdjacentHTML('beforeend', markup);
+            }
+        },
+        filterGenre(){
+            const url = `../milestone-1/music.php?genre=${this.selectedGenre}`;
+            axios.get(url)
+                .then(response => {
+                    this.disks = response.data.response;
+                })
+                .catch(error => console.log(error));
+        }
     },
     mounted(){
         axios.get('../milestone-1/music.php')
-        .then(response => this.disks = response.data.response)
+        .then(response => {
+            this.disks = response.data.response;
+            //Bonus
+            for(disk of this.disks){
+                if(!this.genres.includes(disk.genre)){
+                    this.genres.push(disk.genre);
+                }
+            }
+            this.fillSelect();
+        })
         .catch(error => console.log(error));
     }
 });

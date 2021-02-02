@@ -15,6 +15,10 @@
             <nav>
                 <div class="container">
                     <img src="../dist/img/logo.png" alt="logo spotify">
+                    <select name="genre" id="genre" v-model="selectedGenre">
+                        <option value="All">Tutti i generi</option>
+                    </select>
+                    <button @click="filterGenre">Filtra</button>
                 </div>
             </nav>
         </header>
