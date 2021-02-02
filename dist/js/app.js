@@ -7,10 +7,20 @@
   \********************/
 /***/ (() => {
 
-axios.get('../milestone-1/music.php').then(function (response) {
-  return console.log(response.data.response);
-})["catch"](function (error) {
-  return console.log(error);
+var app = new Vue({
+  el: '#root',
+  data: {
+    disks: []
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    axios.get('../milestone-1/music.php').then(function (response) {
+      return _this.disks = response.data.response;
+    })["catch"](function (error) {
+      return console.log(error);
+    });
+  }
 });
 
 /***/ }),

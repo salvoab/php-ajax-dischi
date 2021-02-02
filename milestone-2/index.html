@@ -9,35 +9,33 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <img src="../dist/img/logo.png" alt="logo spotify">
-            </div>
-        </nav>
-    </header>
+    <div id="root">
 
-    <main>
-        <div class="container d-flex flex-wrap space-between">
-            <!-- TEST CARD  -->
-            <div class="card">
-                <img src="../dist/img/logo.png">
-                <h3>Titolo</h3>
-                <h4>Artista</h4>
-                <h5>1986</h5>
-                <h5>Genere</h5>
+        <header>
+            <nav>
+                <div class="container">
+                    <img src="../dist/img/logo.png" alt="logo spotify">
+                </div>
+            </nav>
+        </header>
+    
+        <main>
+            <div class="container d-flex flex-wrap space-between">
+                <!-- music card -->
+                <div v-for="disk in disks" class="card">
+                    <img :src="disk.poster">
+                    <h3>{{disk.title}}</h3>
+                    <h4>{{disk.author}}</h4>
+                    <h5>{{disk.year}}</h5>
+                    <h5>{{disk.genre}}</h5>
+                </div>
+                
             </div>
+        </main>
+    </div>
 
-            <!-- <div class="card">
-                <img src="">
-                <h3></h3>
-                <h4></h4>
-                <h5></h5>
-                <h5></h5>
-            </div> -->
-            
-        </div>
-    </main>
+    <!-- Vue Dev CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="../dist/js/app.js"></script>
 </body>
 </html>
