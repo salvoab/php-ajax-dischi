@@ -21,6 +21,23 @@ nav {
     img{
         width: 50px;
     }
+    .music-filter{
+        label{
+            color: $text_color;
+        }
+
+        select{
+            padding: 2px 0;
+        }
+
+        button{
+            padding: 2px 8px;
+        }
+
+        & *{
+            margin: 0 6px;
+        }
+    }
 }
 
 main{

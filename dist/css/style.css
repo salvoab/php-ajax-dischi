@@ -22,6 +22,18 @@ nav {
 nav img {
   width: 50px;
 }
+nav .music-filter label {
+  color: grey;
+}
+nav .music-filter select {
+  padding: 2px 0;
+}
+nav .music-filter button {
+  padding: 2px 8px;
+}
+nav .music-filter * {
+  margin: 0 6px;
+}
 
 main {
   padding: 80px 0;
@@ -62,4 +74,8 @@ h4, h5 {
 
 .space-between {
   justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
 }
