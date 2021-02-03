@@ -1,4 +1,5 @@
 import Vue from "vue";
+import axios from "axios";
 
 let app = new Vue({
     el: '#root',
