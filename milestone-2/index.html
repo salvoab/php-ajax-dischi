@@ -28,7 +28,7 @@
             <div class="container d-flex flex-wrap space-between">
                 <!-- music card -->
                 <div v-for="disk in disks" class="card">
-                    <img :src="disk.poster">
+                    <img :src="disk.poster" :alt="disk.title">
                     <h3>{{disk.title}}</h3>
                     <h4>{{disk.author}}</h4>
                     <h5>{{disk.year}}</h5>
