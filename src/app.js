@@ -1,3 +1,5 @@
+import Vue from "vue";
+
 let app = new Vue({
     el: '#root',
     data: {
@@ -9,8 +11,9 @@ let app = new Vue({
     //metodi per il Bonus
     methods:{
         fillSelect(){
+            console.log(this.genres);
             const selectElement = document.querySelector('select');
-            for(genre of this.genres){
+            for(let genre of this.genres){
                 const markup = `<option value="${genre}">${genre}</option>`;
                 selectElement.insertAdjacentHTML('beforeend', markup);
             }
@@ -29,7 +32,7 @@ let app = new Vue({
         .then(response => {
             this.disks = response.data.response;
             //Bonus
-            for(disk of this.disks){
+            for(let disk of this.disks){
                 if(!this.genres.includes(disk.genre)){
                     this.genres.push(disk.genre);
                 }
