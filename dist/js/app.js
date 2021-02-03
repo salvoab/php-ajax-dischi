@@ -28,7 +28,6 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
   //metodi per il Bonus
   methods: {
     fillSelect: function fillSelect() {
-      console.log(this.genres);
       var selectElement = document.querySelector('select');
 
       var _iterator = _createForOfIteratorHelper(this.genres),

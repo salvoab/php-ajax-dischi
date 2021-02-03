@@ -11,7 +11,6 @@ let app = new Vue({
     //metodi per il Bonus
     methods:{
         fillSelect(){
-            console.log(this.genres);
             const selectElement = document.querySelector('select');
             for(let genre of this.genres){
                 const markup = `<option value="${genre}">${genre}</option>`;
