@@ -1,7 +1,14 @@
 <?php
 include __DIR__ . '/disks.php';
-
-$genre = $_GET['genre'];
+/*
+Controllo per evitare la notifica nel php_error
+    Notice:  Undefined index: genre
+*/
+if(isset($_GET['genre'])){
+    $genre = $_GET['genre'];
+} else {
+    $genre = 'All';
+}
 
 if(empty($genre) || $genre == 'All'){
     $response_data = [
