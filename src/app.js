@@ -18,7 +18,7 @@ let app = new Vue({
             }
         },
         filterGenre(){
-            const url = `../milestone-1/music.php?genre=${this.selectedGenre}`;
+            const url = `../milestone-1/api_music.php?genre=${this.selectedGenre}`;
             axios.get(url)
                 .then(response => {
                     this.disks = response.data.response;
@@ -27,7 +27,7 @@ let app = new Vue({
         }
     },
     mounted(){
-        axios.get('../milestone-1/music.php')
+        axios.get('../milestone-1/api_music.php')
         .then(response => {
             this.disks = response.data.response;
             //Bonus

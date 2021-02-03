@@ -48,7 +48,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
     filterGenre: function filterGenre() {
       var _this = this;
 
-      var url = "../milestone-1/music.php?genre=".concat(this.selectedGenre);
+      var url = "../milestone-1/api_music.php?genre=".concat(this.selectedGenre);
       axios.get(url).then(function (response) {
         _this.disks = response.data.response;
       })["catch"](function (error) {
@@ -59,7 +59,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
   mounted: function mounted() {
     var _this2 = this;
 
-    axios.get('../milestone-1/music.php').then(function (response) {
+    axios.get('../milestone-1/api_music.php').then(function (response) {
       _this2.disks = response.data.response; //Bonus
 
       var _iterator2 = _createForOfIteratorHelper(_this2.disks),
