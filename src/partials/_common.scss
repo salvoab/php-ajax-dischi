@@ -56,10 +56,16 @@ main{
     img{
         width: 90%;
     }
-    h3, h4, h5{
-        padding: 5px 0;
-    }
-    h3{
-        margin-top: 20px;
+
+    .info{
+        width: 90%;
+        text-align: center;
+        
+        h3, h4, h5{
+            padding: 5px 0;
+        }
+        h3{
+            margin-top: 20px;
+        }
     }
 }

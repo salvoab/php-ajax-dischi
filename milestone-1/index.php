@@ -33,10 +33,12 @@ include __DIR__ . '/disks.php';
             <?php foreach($disks as $disk) { ?>
                 <div class="card">
                     <img src="<?php echo $disk['poster']; ?>" alt="<?php echo $disk['title']; ?>">
-                    <h3><?php echo $disk['title']; ?></h3>
-                    <h4><?php echo $disk['author']; ?></h4>
-                    <h5><?php echo $disk['year']; ?></h5>
-                    <h5><?php echo $disk['genre']; ?></h5>
+                    <div class="info">
+                        <h3><?php echo $disk['title']; ?></h3>
+                        <h4><?php echo $disk['author']; ?></h4>
+                        <h5><?php echo $disk['year']; ?></h5>
+                        <h5><?php echo $disk['genre']; ?></h5>
+                    </div>
                 </div>
             <?php } ?>
         </div>
